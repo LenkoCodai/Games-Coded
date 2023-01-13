@@ -26,8 +26,8 @@ local StaffIds = {
 	for l, c in pairs(game.Players:GetChildren()) do
 		for i, v in pairs(StaffIds) do
 			if c.UserId == v then
-				local AgentPremium = game.Players.LocalPlayer
-				AgentPremium:Kick("Staff Joined")
+				local lps = game.Players.LocalPlayer
+				lps:Kick("Staff Joined")
 			end
 		end
 	end
@@ -35,8 +35,8 @@ local StaffIds = {
 	game.Players.PlayerAdded:Connect(function(lp)
 		for i, v in pairs(StaffIds) do
 			if lp.UserId == v then
-				local AgentPremium = game.Players.LocalPlayer
-				AgentPremium:Kick("Staff Joined")
+				local lps = game.Players.LocalPlayer
+				lps:Kick("Staff Joined")
 			end
 		end
 	end)
