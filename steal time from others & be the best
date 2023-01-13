@@ -1,0 +1,46 @@
+
+local lp = game.Players.LocalPlayer
+
+local StaffIds = {
+  23464867,
+  1194619087,
+  307978637,
+  972668671,
+    553816548,
+    222110177,
+    9826477,
+    1468915877,
+    860290933,
+    198930179,
+    38065013,
+    328486719,
+    197869863,
+    296032299,
+    2021922656,
+    
+    64881507,
+    
+}
+
+
+	for l, c in pairs(game.Players:GetChildren()) do
+		for i, v in pairs(StaffIds) do
+			if c.UserId == v then
+				local AgentPremium = game.Players.LocalPlayer
+				AgentPremium:Kick("Staff Joined")
+			end
+		end
+	end
+  
+	game.Players.PlayerAdded:Connect(function(lp)
+		for i, v in pairs(StaffIds) do
+			if lp.UserId == v then
+				local AgentPremium = game.Players.LocalPlayer
+				AgentPremium:Kick("Staff Joined")
+			end
+		end
+	end)
+	
+
+
+    
